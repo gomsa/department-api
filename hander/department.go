@@ -6,6 +6,7 @@ import (
 	"github.com/gomsa/department/client"
 	departmentPB "github.com/gomsa/department/proto/department"
 	"github.com/gomsa/tools/uitl"
+	"github.com/micro/go-micro/util/log"
 
 	pb "github.com/gomsa/department-api/proto/department"
 )
@@ -19,14 +20,17 @@ func (srv *Department) All(ctx context.Context, req *pb.Department, res *pb.Resp
 	department := &departmentPB.Department{}
 	err = uitl.Data2Data(req, department)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	departmentRes, err := client.Department.All(ctx, department)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	err = uitl.Data2Data(departmentRes, res)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	return err
@@ -37,14 +41,17 @@ func (srv *Department) List(ctx context.Context, req *pb.ListQuery, res *pb.Resp
 	query := &departmentPB.ListQuery{}
 	err = uitl.Data2Data(req, query)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	departmentRes, err := client.Department.List(ctx, query)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	err = uitl.Data2Data(departmentRes, res)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	return err
@@ -55,14 +62,17 @@ func (srv *Department) Get(ctx context.Context, req *pb.Department, res *pb.Resp
 	department := &departmentPB.Department{}
 	err = uitl.Data2Data(req, department)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	departmentRes, err := client.Department.Get(ctx, department)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	err = uitl.Data2Data(departmentRes, res)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	return err
@@ -73,14 +83,17 @@ func (srv *Department) Create(ctx context.Context, req *pb.Department, res *pb.R
 	department := &departmentPB.Department{}
 	err = uitl.Data2Data(req, department)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	departmentRes, err := client.Department.Create(ctx, department)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	err = uitl.Data2Data(departmentRes, res)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	return err
@@ -91,14 +104,17 @@ func (srv *Department) Update(ctx context.Context, req *pb.Department, res *pb.R
 	department := &departmentPB.Department{}
 	err = uitl.Data2Data(req, department)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	departmentRes, err := client.Department.Update(ctx, department)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	err = uitl.Data2Data(departmentRes, res)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	return err
@@ -110,14 +126,17 @@ func (srv *Department) Delete(ctx context.Context, req *pb.Department, res *pb.R
 		Id: req.Id,
 	}
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	departmentRes, err := client.Department.Delete(ctx, department)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	err = uitl.Data2Data(departmentRes, res)
 	if err != nil {
+		log.Log(err)
 		return err
 	}
 	return err
