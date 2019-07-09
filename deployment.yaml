@@ -42,15 +42,8 @@ spec:
             "--server_address=:8080",
           ]
           env:
-            - name: USER_NAME
+            - name: DEPARTMENT_NAME
               value: "department.srv"
-            - name: REDIS_HOST
-              value: "redis-master"
-            - name: REDIS_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  key: redis-password
-                  name: redis
           ports:
           - containerPort: 8080
             name: micro
