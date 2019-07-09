@@ -21,7 +21,7 @@ func (srv *Department) All(ctx context.Context, req *pb.Department, res *pb.Resp
 	if err != nil {
 		return err
 	}
-	departmentRes, err := client.Department.Get(ctx, department)
+	departmentRes, err := client.Department.All(ctx, department)
 	if err != nil {
 		return err
 	}
