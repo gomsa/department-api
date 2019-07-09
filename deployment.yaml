@@ -42,6 +42,8 @@ spec:
             "--server_address=:8080",
           ]
           env:
+            - name: USER_NAME
+              value: "user.srv"
             - name: DEPARTMENT_NAME
               value: "department.srv"
           ports:
