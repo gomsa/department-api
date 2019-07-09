@@ -14,6 +14,24 @@ import (
 type Department struct {
 }
 
+// All 获取部门
+func (srv *Department) All(ctx context.Context, req *pb.Department, res *pb.Response) (err error) {
+	department := &departmentPB.Department{}
+	err = uitl.Data2Data(req, department)
+	if err != nil {
+		return err
+	}
+	departmentRes, err := client.Department.Get(ctx, department)
+	if err != nil {
+		return err
+	}
+	err = uitl.Data2Data(departmentRes, res)
+	if err != nil {
+		return err
+	}
+	return err
+}
+
 // List 部门列表
 func (srv *Department) List(ctx context.Context, req *pb.ListQuery, res *pb.Response) (err error) {
 	query := &departmentPB.ListQuery{}

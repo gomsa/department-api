@@ -10,8 +10,8 @@ import (
 	"github.com/gomsa/department-api/hander"
 	departmentPB "github.com/gomsa/department-api/proto/department"
 
-	"github.com/gomsa/department/client"
-	m "github.com/gomsa/department/middleware"
+	"github.com/gomsa/user/client"
+	m "github.com/gomsa/user/middleware"
 )
 
 func main() {
