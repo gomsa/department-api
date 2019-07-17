@@ -3,7 +3,7 @@ github.com/armon/go-metrics
 # github.com/go-log/log v0.1.0
 github.com/go-log/log
 github.com/go-log/log/log
-# github.com/golang/protobuf v1.3.1
+# github.com/golang/protobuf v1.3.2
 github.com/golang/protobuf/proto
 github.com/golang/protobuf/jsonpb
 github.com/golang/protobuf/ptypes/struct
@@ -11,18 +11,19 @@ github.com/golang/protobuf/ptypes
 github.com/golang/protobuf/ptypes/any
 github.com/golang/protobuf/ptypes/duration
 github.com/golang/protobuf/ptypes/timestamp
-# github.com/gomsa/department v0.0.0-20190709015250-c3cc6ebd9ca6
+# github.com/gomsa/department v0.0.0-20190716234414-9845e35ab388
 github.com/gomsa/department/client
 github.com/gomsa/department/proto/department
 # github.com/gomsa/tools v0.0.0-20190615000832-56bbd6704f6b
 github.com/gomsa/tools/config
 github.com/gomsa/tools/uitl
 github.com/gomsa/tools/k8s/client
-# github.com/gomsa/user v0.0.0-20190704055540-63f96c2c7072
+# github.com/gomsa/user v0.0.0-20190713014816-bcd837144465
 github.com/gomsa/user/client
 github.com/gomsa/user/middleware
 github.com/gomsa/user/proto/auth
 github.com/gomsa/user/proto/casbin
+github.com/gomsa/user/proto/frontPermit
 github.com/gomsa/user/proto/permission
 github.com/gomsa/user/proto/role
 github.com/gomsa/user/proto/user

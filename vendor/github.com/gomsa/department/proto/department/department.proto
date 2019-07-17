@@ -28,12 +28,9 @@ message Department {
     string updated_at = 7;
 }
 message ListQuery{
-    int64 limit=1; //返回数量
-    int64 page=2; //页面
-    string sort=3; // 排序
-    string id = 4;
-    string parent = 5;
-    string name = 6;
+    int64 id = 1;
+    int64 parent = 2;
+    string name = 3;
 }
 message Request {
 }
@@ -41,6 +38,5 @@ message Request {
 message Response {
     Department department = 1;
     repeated Department departments = 2;
-    int64 total = 3;
-    bool valid = 4;
+    bool valid = 3;
 }
